@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">       <!--兼容老浏览器-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">      <!--在手机浏览器上，宽度适应手机-->
+        <title>天梦の个人网站</title>
+        
+        <style>
+            body {
+                    background: white;
+                    color: black;
+                    background-image:url("./图/背景.jpg");
+                    background-size: cover;        /* 铺满整个屏幕 */
+                    background-position: center;   /* 居中 */
+                    background-repeat: no-repeat;  /* 不重复 */
+
+                }
+            .background {
+                    background-color: rgba(240, 240, 240, 0.8);    /*浅灰白*/
+                    color: #333;            /*很深灰色字体颜色*/
+            }
+            
+            /*固定两边容器位置大小，使中间容器位置固定在中间*/
+            .left, .right {
+                width: 25%;          /* 固定宽度 */
+                flex: 1;
+            }
+
+            /*适配深色模式*/
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background: #1a1a1a;
+                    color: #e0e0e0;
+                }
+                .background {
+                    background-color: #3a3a3a;    /* 深灰色容器背景 */
+                    color: #f0f0f0;       /* 浅灰白 */
+                }
+            }
+            /*适配手机*/
+            @media (max-width: 768px) {
+                body {
+                    font-size: 12px;  /* 全局缩小 */
+                    background-image: url('./图/手机背景.png');
+                    background-size: cover;
+                }
+                h2 {
+                    font-size: 18px;  /* 字体缩小 */
+                }
+                .name {
+                    font-size: 14px !important;  /* 覆盖内联样式 */
+                }
+                img {
+                    width: 60px;      /* 头像缩小 */
+                }
+                .left, .right {
+                    display: none;      /*不显示左右容器*/
+                }
+            }
+        </style>
+
+        <!--樱花飘落特效-->
+        <script>
+            window.sakuraConfig = {
+                sakura: 60,
+                xSpeed: 3.0,
+                ySpeed: 2.0,
+                rSpeed: 0.025,
+                direction: "TopRight",
+                zIndex: -1,
+            };
+        </script>
+        <script src="./sakura-rain-1.1.0/sakura-rain.js" defer></script>
+
+    </head>
+
+    <body style="display: flex; justify-content: center; align-items: flex-start; column-gap: 2px;">
+
+        <!--左侧部分-->
+        <div class="left">
+            <div style="margin-top: 30%; margin-left: 20%;">
+                <img src="./图/动图.gif" width="160" height="160" style="border-radius: 40%;">
+            </div>
+        </div>
+    
+        <!--中间主体部分-->
+        <div class="center">
+
+            <!--头像与名字-->
+            <div class="background" style="text-align: center; width: 60%; max-width: 400px; margin: 0 auto; padding: 10px; border-radius: 20px; margin-bottom:40px;">
+                <!--其中text-align是文本水平对齐方式；margin: 0 auto使容器水平居中；padding是内容与容器的边距（扩展式增加，容器会被填充得比设定的大小更大），margin-bottom是下边距（后面的margin-top是上边距）-->
+                <img src="./图/头像.png" width="25%">      <!--似乎能用style="border-radius: 50%;"直接让头像变圆，不过没试过效果，应该就是让四角变圆的范围扩大到边的一半吧-->
+                <h2 class="name">神悠 天梦</h2>
+                <p class="name", style="font-size: 18px"><i>别名：kiss_sky</i></p>
+            </div>
+
+            <!--主要内容-->
+            <div class="background" style="width: 90%; max-width: 600px; margin: 0 auto; padding: 20px; border-radius: 20px; margin-top: 40px;">
+                <p>
+                    你好，我叫神悠 天梦——<br>
+                    一个傲慢而又自卑的普通玩家<br>
+                    2022年入坑galgame<br>
+                    自我意识过剩、性格极其恶劣之人<br>
+                    评分完全凭借我当时的个人想法<br>
+                    在我胡扯一通之后会根据cg、hcg、猎奇、人物塑造、bgm、剧情、cv、系统，最后给个总的评分<br>
+                    其中cg指整部作品大部分cg的画风，hcg其实就是指色不色<br>
+                    猎奇的话，我这里指的范畴很广，广义上的猎奇，鬼畜、整活、r18g、电波这些都算<br>
+                    bgm主要取决于我自己喜不喜欢（本人没有音乐功底，完全主观评价）<br>
+                    剧情我会根据游戏类型不同给分（比如废萌我会看这够不够甜，够不够有趣，剧情作我会看剧情深度和整个结构怎么样，拔作我会看剧情够不够逆天？）<br>
+                    cv方面我的评分可以说压根没参考价值，因为我推gal基本不听cv，所以这一项纯纯是凑数的（一些特别烂的除外）<br>
+                    系统方面我以前是没有打分的习惯的，但最近属实碰到不少让我感觉毁天灭地级别的垃圾系统，让我苦不堪言，故决定加上这一评分项<br>
+                    总评分标准纯看我个人了，但一般我个人喜好在我这的占比是最大的<br>
+                    <br>
+                    以上所有评分项都是我个人主观评价的，所以也会出现我个人十分喜欢导致分数虚高与我个人讨厌导致分数偏低的情况，见谅<br>
+                    所有评分项采取十分制<br>
+                </p>
+                <span class="contect_info">粉丝群：</span><i>1064136038</i><br>
+                <span class="contect_info">Bilibili：</span>
+                    <a href="https://b23.tv/VkWFZbG" class="contect_info" target="_blank" style="color: #FB7299; text-decoration: none;">
+                        <i class="contect_info">神悠天梦（点击跳转）</i>
+                    </a><i style="color: gray; opacity: 0.5;" class="contect_info">   （三连灌注谢谢喵）</i><br>      <!--text-decoration: none的作用是去除链接文字的下划线-->
+                <span class="contect_info">bangumi：</span>
+                    <a href="https://bgm.tv/user/kiss_sky" class="contect_info" target="_blank" style="color: #FB7299; text-decoration: none;">
+                        <i class="contect_info">神悠 天梦@kiss_sky（点击跳转）</i>
+                    </a><i style="color: gray; opacity: 0.5" class="contect_info">   （婆婆门不要拷打我们萌萌人吖）</i><br>
+                <span class="contect_info">GitHub：</span>
+                    <a href="https://github.com/kiss-sky" class="contect_info" target="_blank" style="color: #FB7299; text-decoration: none;">
+                        <i class="contect_info">神悠 天梦/kiss-sky（点击跳转）</i>
+                    </a><i style="color: gray; opacity: 0.5" class="contect_info">   （纯萌新，暂时没东西喵）</i><br>
+            </div>
+        </div>
+
+        <!--右侧部分-->
+        <div class="right">
+
+            <!--右上角-->
+            <div style="height: 60px; padding: 20px; box-sizing: border-box; padding: 40px; text-align: right;">
+                <p id="typewriter" style="color: pink; font-size: 24px; font-style: italic; font-family: '楷体', 'STKaiti', 'KaiTi', serif;"></p>
+                <script>
+                    const text = "手一直握下去，<br>心会连起来吗？";
+                    let index = 0;
+                    function typeLoop() {
+                        if (index <= text.length) {
+                            document.getElementById('typewriter').innerHTML = text.slice(0, index);
+                            index++;
+                            setTimeout(typeLoop, 100);
+                        } else {
+                            setTimeout(() => {
+                                index = 0;
+                                document.getElementById('typewriter').textContent = '';
+                                setTimeout(typeLoop, 500);
+                            }, 3000);  // 整句显示2秒后重新开始
+                        }
+                    }
+                    typeLoop();
+                </script>
+            </div>
+
+            <!--友情链接-->
+            <div class="background" style="width: 90%; max-width: 360px; margin: 0 auto; padding: 20px; border-radius: 20px; margin-top: 640px;">
+                <h3>友情链接：</h3>
+                <span class="friend_link">飞天马bangumi：</span>
+                    <a href="https://bgm.tv/user/rtkfufu" class="friend_link" target="_blank" style="color: #FB7299; text-decoration: none;">
+                        <i class="friend_link">一只飞天马@rtkfufu</i>
+                    </a><br>
+                <span class="friend_link">飞天马bilibili：</span>
+                    <a href="https://b23.tv/PL8xUYZ" class="friend_link" target="_blank" style="color: #FB7299; text-decoration: none;">
+                        <i class="friend_link">一只飞天马</i>
+                    </a><br>
+                <span class="friend_link">私风bangumi：</span>
+                    <a href="https://bgm.tv/user/sifeng_0621" class="friend_link" target="_blank" style="color: #FB7299; text-decoration: none;">
+                        <i class="friend_link">私i闻晚の风@sifeng_0621</i>
+                    </a><br>
+                <span class="friend_link">私风bilibili：</span>
+                    <a href="https://b23.tv/jRcz4Em" class="friend_link" target="_blank" style="color: #FB7299; text-decoration: none;">
+                        <i class="friend_link">私i闻晚の风</i>
+                    </a><br>
+            </div>
+        </div>
+
+    </body>
+
+</html>
